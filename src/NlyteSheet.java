@@ -1,19 +1,19 @@
 
 public class NlyteSheet {
+
+	private String[]values;
 	
-	String[]values;
-	
-	public NlyteSheet(String[] values) {
+	NlyteSheet(String[] values) {
 		this.values = values;
 	}
 	
 
-	public String assetTag() {
+	String assetTag() {
 		return values[4].trim();
 	}
 	
 	
-	public String serialNumber() {
+	String serialNumber() {
 		return values[3].trim();
 	}
 	
@@ -27,8 +27,8 @@ public class NlyteSheet {
 		values[4] = s.trim().toUpperCase();
 	}
 	
-	public String MaterialName() {
-		return values[5].trim();
+	String MaterialName() {
+		return values[2].trim();
 	}
 	
 	
@@ -37,7 +37,7 @@ public class NlyteSheet {
 	}
 
 
-	public String getNumber() {
+	String getNumber() {
 		return values[1].trim();
 	}
 	
@@ -51,7 +51,8 @@ public class NlyteSheet {
 		public String toString() {
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i != values.length; ++i) {
-				sb.append(values[i] + ", ");
+				sb.append(values[i]);
+				sb.append(", ");
 			}
 			return sb.toString();
 		}

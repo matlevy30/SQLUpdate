@@ -22,7 +22,7 @@ public class Update {
 				// Appending Serial Number
 				String serial = values.serialNumber();
 				// Adding to SQL Statement
-				sb.append("UPDATE [dbo].[Asset] SET [SerialNumber] = '" + serial + "'");
+				//sb.append("UPDATE [dbo].[Asset] SET [SerialNumber] = '" + serial + "'");
 
 				// Getting Asset Tag
 				String tag = values.assetTag();
@@ -31,8 +31,8 @@ public class Update {
 				
 				
 				//Getting Meterial
-				//String material = values.MaterialName();
-				//sb.append("UPDATE [dbo].[Asset] SET [MaterialID] = '" + material + "'");
+				String material = values.MaterialName();
+				sb.append("UPDATE [dbo].[Asset] SET [MaterialID] = '" + material + "'");
 
 				// Getting Number
 				// first = sCurrentLine.lastIndexOf(",");
