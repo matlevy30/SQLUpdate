@@ -10,14 +10,14 @@ public class Reader {
 	private ArrayList<NlyteSheet> lines;
 	private String[] header;
 
-	public Reader() throws FileNotFoundException {
+	Reader() throws FileNotFoundException {
 
-		String fileName = "src/Update.csv";
+		String fileName = "C:\\Users\\matlevy\\workspace\\The fix\\src\\Update.csv";
 		reader = new CSVReader(new FileReader(fileName));
 		lines = new ArrayList<>();
 	}
 
-	public void readLines() throws IOException {
+	void readLines() throws IOException {
 
 		// Header
 		header = reader.readNext();
@@ -31,7 +31,7 @@ public class Reader {
 		}
 	}
 
-	public ArrayList<NlyteSheet> getList() {
+	ArrayList<NlyteSheet> getList() {
 		return lines;
 	}
 	// Return Header of File

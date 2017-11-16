@@ -10,12 +10,16 @@ public class NlyteSheet {
 
 	String assetTag() {
 		return values[4].trim();
-	}
+	} // Side
 	
 	
 	String serialNumber() {
 		return values[3].trim();
-	}
+	} // CableID
+
+	String cabName() { return values[8]; }
+
+	String ru() { return values[11]; }
 	
 	
 	public void setSerial(String s) {
@@ -32,7 +36,7 @@ public class NlyteSheet {
 	}
 	
 	
-	public String HostName() {
+	String HostName() {
 		return values[0].trim();
 	}
 
